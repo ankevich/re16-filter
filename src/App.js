@@ -1,31 +1,35 @@
-import { useState } from 'react';
-import './App.css';
-import projects from './projects';
-
-
+import { useState } from "react";
+import "./App.css";
+import projects from "./projects";
 
 const Portfolio = () => {
-const filters = ['All', 'Websites', 'Flayers', 'Business Cards'];
-const {selected, changeSelection} = useState('All');
+  const filters = ["All", "Websites", "Flayers", "Business Cards"];
+  const { selected, changeSelection } = useState("All");
 
-  const {state, changeState} = useState([]);
-  
-}
+  const { state, changeState } = useState([]);
 
-const Toolbar = ({filters, selected, onSelectFilter}) => {
+  return (
+    <>
+      <Toolbar filters={filters} />
+      <ProjectList projects={projects}/>
+    </>
+  );
+};
 
-}
+const Toolbar = ({ filters, selected, onSelectFilter }) => {
+  return <>
+    { filters }
+  </>;
+};
 
-const ProjectList = ({projects}) => {
-
-}
+const ProjectList = ({ projects }) => {
+  return <>
+    { projects.length }
+  </>;
+};
 
 function App() {
-  return (
-    <div className="App">
-      <div>"Hello world"</div>
-    </div>
-  );
+  return <Portfolio />;
 }
 
 export default App;

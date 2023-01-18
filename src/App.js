@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import projects from "./projects";
+import Toolbar from "./Toolbar";
 
 const Portfolio = () => {
   const filters = ["All", "Websites", "Flayers", "Business Cards"];
@@ -16,11 +17,7 @@ const Portfolio = () => {
   );
 };
 
-const Toolbar = ({ filters, selected, onSelectFilter }) => {
-  return <>
-    { filters }
-  </>;
-};
+
 
 const ProjectList = ({ projects }) => {
   return <>

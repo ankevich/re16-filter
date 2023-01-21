@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-const Toolbar = ({ filters, selected, onSelectFilter }) => {
+const Toolbar = ({ filters, selectedFilterName, onSelectFilter }) => {
   return (
     <>
       {filters.map((filter) => (
-        <Button>{filter}</Button>
+        <Button selected={filter === selectedFilterName}>{filter}</Button>
       ))}
     </>
   );
 };
 
 const Button = styled.button`
-  background: transparent;
+  background: ${(props) => (props.selected ? "#708090" : "transparent")};
   border: 1px solid #708090;
-  color: #4f5f6f;
+  color: ${(props) => (props.selected ? "#fff" : "#4f5f6f")};
   padding: 0.5rem 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;

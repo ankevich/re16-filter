@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-const Toolbar = ({ filters, selectedFilterName, onSelectFilter }) => {
+const Toolbar = ({ filters, selectedFilterName, changeFilter }) => {
   return (
     <>
       {filters.map((filter) => (
-        <Button selected={filter === selectedFilterName}>{filter}</Button>
+        <Button
+          selected={filter === selectedFilterName}
+          onClick={() => changeFilter(filter)}
+        >
+          {filter}
+        </Button>
       ))}
     </>
   );

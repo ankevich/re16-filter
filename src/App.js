@@ -10,12 +10,15 @@ function App() {
 
 const Portfolio = () => {
   const filters = ["All", "Websites", "Flyers", "Business Cards"];
-  const [ selected, changeSelection ] = useState("All");
-  const [ state, changeState ] = useState([]);
+  const [selectedFilter, changeFilter] = useState("All");
 
   return (
     <Container>
-      <Toolbar filters={filters} selectedFilterName={selected} />
+      <Toolbar
+        filters={filters}
+        selectedFilterName={selectedFilter}
+        changeFilter={changeFilter}
+      />
       <ProjectList projects={projects} />
     </Container>
   );

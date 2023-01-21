@@ -37,7 +37,7 @@ const projects = [
   },
   {
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/place200x290_2.png",
-    category: "Flayers",
+    category: "Flyers",
   },
   {
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/the_ninetys_brand.jpg",
@@ -65,7 +65,7 @@ const projects = [
   },
   {
     img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/place200x290_3.png",
-    category: "Flayers",
+    category: "Flyers",
   },
 ];
 

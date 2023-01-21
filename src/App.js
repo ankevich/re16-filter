@@ -19,7 +19,7 @@ const Portfolio = () => {
         selectedFilterName={selectedFilter}
         changeFilter={changeFilter}
       />
-      <ProjectList projects={projects} />
+      <ProjectList projects={projects} selectedFilter={selectedFilter}/>
     </Container>
   );
 };

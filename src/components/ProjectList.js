@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-const ProjectList = ({ projects }) => {
+const ProjectList = ({ projects, selectedFilter }) => {
   return (
     <List>
       {projects.map((project) => {
-        return <img src={project.img} alt={project.category} />;
+        return selectedFilter === "All" ||
+          selectedFilter === project.category ? (
+            <img src={project.img} alt={project.category} />
+          ) : null;
       })}
     </List>
   );
